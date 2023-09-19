@@ -1,0 +1,16 @@
+<div class="container">
+  <button (click)="regresarAPrincipal()">Regresar a la página principal</button>
+  <h1>Selección de Artículos</h1>
+  <div class="form">
+    <p-dropdown
+      [options]="items"
+      [(ngModel)]="itemSeleccionado"
+      optionLabel="nombre"
+      (ngModelChange)="seleccionarItem(itemSeleccionado)"
+></p-dropdown>
+    <button (click)="mostrarMensaje()">Mostrar Mensaje</button>
+  </div>
+  <div class="message" *ngIf="mensaje">
+    {{ mensaje }}
+  </div>
+</div>
